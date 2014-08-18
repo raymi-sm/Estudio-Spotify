@@ -1,7 +1,14 @@
 @import "normalice.styl"
-* 
+
+body
+	text-align center
+	font-size 16px
+
+a
+	text-decoration none
+
+figure 
 	margin 0
-	padding 0
 
 figure img
 	width 128px
@@ -9,10 +16,8 @@ figure img
 article 
 	display inline-block
 
-@media screen and (max-width: 440px)
-	body
-		background red 
+.container 
+	font-size 0 /* la propiedad display:inline-block tiene propiedades de texto */
 
-@media screen and (min-width: 768px)
-	body
-		background blue
+.hide-container
+	display none
