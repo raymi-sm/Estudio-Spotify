@@ -1,23 +1,233 @@
 @import "normalice.styl"
+@import "fonts.styl"
+
+/* VARIABLES */
+
+gris_claro = #D0D2D3
+gris_oscuro = #333333 
+color_borde = #818181
+varela = 'Varela Round'
 
 body
-	text-align center
+	/*text-align center*/
 	font-size 16px
+	font-family: varela
 
 a
 	text-decoration none
 
+img
+	vertical-align top
+
+li 
+	list-style none
+
 figure 
 	margin 0
 
-figure img
-	width 128px
+ul
+	margin 0
+	padding 0
 
-article 
+.header, .songs, .songs-playing
+	text-align center
+
+.header
+	height 2.2em
+	padding 0 0 1.625em 0
+	position relative
+	border-bottom 1px solid gris_claro
+
+	.header-desktop
+		display none
+
+	.header-title
+		line-height 2.2em
+		margin 0
+		color gris_oscuro
+
+	.header-menuBtn
+		position absolute
+		top 35%
+		left 1.5em
+		color gris_oscuro
+
+	.header-hide-container
+		display none
+.progress
+	margin-top 1.25em
+	position relative
+	
+	span
+		font-size 0.75em
+		color gris_oscuro
+
+		&:first-child
+			left 0
+			position absolute
+			top -5px
+		&:last-child
+			position absolute
+			right 0
+			top -5px
+	.total
+		background-color gris_claro
+		border-radius 5px
+		height 5px
+		width 70%
+		margin 0 auto
+	.state
+		background-color #CC2F6F
+		border-radius 5px
+		height 5px
+		position relative
+		width 30%
+	.circle
+		background-color black
+		border-radius 50%
+		height 10px
+		position absolute
+		right 0
+		width 10px
+		bottom -2px
+
+.songs
+	font-size 0 /* esto es para limpiar las propiedades de texto que tiene display:inline-block */
+	padding: 1.4rem
+
+.songs-container 
 	display inline-block
+	font-size 1rem
+	padding 0 1em 0 0
+	text-align left
 
-.container 
-	font-size 0 /* la propiedad display:inline-block tiene propiedades de texto */
+	img
+		width 128px
 
-.hide-container
+	&:nth-child(even)
+		padding-right 0	
+
+.songs-description-container
+
+	.songs-title 
+		margin-top 1em
+		margin-bottom 0
+		color gris_oscuro
+
+	.songs-description
+		margin-top 0
+		margin-bottom 1em
+		color gris_claro
+.songs-playing-list
 	display none
+
+.songs-playing, .songs-playing-list 
+	/*display none*/
+	.menu
+		display none
+	&.small
+		width 20em
+		margin 0 auto
+	
+	.controls a
+		font-size 1.5em
+
+		&:nth-child(even)
+			color gris_oscuro
+		&:nth-child(odd)
+			color gris_claro
+
+	.songs-description-container
+				border-bottom 1px solid gris_oscuro
+				margin-bottom 1em
+
+	.songs-imageContainer 
+		position relative
+
+		img
+			width 320px
+
+		.actions
+			background-color rgba(0, 0, 0, 0.3)
+			text-align right
+			position absolute
+			bottom 0
+			right 0
+			left 0
+			width 100%
+			padding 0.5em 0
+
+		 	a
+				font-size 1.8em
+				color #fff
+				margin-right 0.5em
+ 
+ /* MEDIA QUERIES  */ 
+ 
+ @media screen and (min-width:480px)
+	body 
+		/*background-color red*/
+	.songs-container
+		&:nth-child(even)
+			padding-right 1em
+
+	.songs-playing
+		&.medium
+			width auto
+		.songs-imageContainer
+			img
+				width 100%
+
+@media screen and (min-width:1000px)	
+	body 
+		/*background-color blue*/
+	.header
+		height auto
+		text-align left
+		padding 1.625em 0
+
+		.header-mobile
+			display none
+
+		.header-desktop
+			display block
+			width 90%
+			margin 0 auto
+			overflow hidden
+
+			.header-logo
+				float left
+				img
+					width 122px
+			.header-search, .header-user
+				float right
+
+	.songs-playing-container
+		width 90%
+		margin 0 auto
+		.menu
+			display block
+			.menu-list
+				.menu-listLink
+					float left
+					text-transform uppercase
+					color gris_oscuro
+		/*.songs-playing
+			&.large
+				text-align left
+				width 45%
+				display inline-block
+				margin 3em 
+
+				.songs-imageContainer
+					img
+						width 100%
+
+	.songs-playing-list
+		background-color red
+		width 45%
+		display inline-block*/
+	
+
+
+	

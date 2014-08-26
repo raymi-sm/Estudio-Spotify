@@ -4,64 +4,185 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/styles.css">
-
+	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
 	
-	<header>
-		<a href="" class="btn-menu">*</a>
-		<div class="hide-container">
-			<div class="search">
-				<input type="text" />
-				<a href="#">Buscar</a>
+	<header class="header">
+		<div class="header-desktop">
+			<figure class="header-logo">
+				<img src="images/logo.png" alt="">
+			</figure>
+			<div class="header-user">
+				@raymicha 
 			</div>
-		
-			<nav class="menu">
-				<ul>
-					<li><a href="#">Top Hits</a></li>
-					<li><a href="#">Profile</a></li>
-					<li><a href="#">Settings</a></li>
-					<li><a href="#">My Likes</a></li>
-					<li><a href="#">Playlists</a></li>
-					<li><a href="#">Logout</a></li>
-				</ul>
-			</nav>	
+			<div class="header-search">
+				search	
+			</div>
 		</div>
-		<h2>Top Hits</h2>
+		
+		<div class="header-mobile">
+			<a href="#" class="header-menuBtn icon-menu"></a>
+			<h2 class="header-title">Top Hits</h2>
+
+			<div class="header-hide-container">
+				<!--<div class="header-search">
+					<input type="text" class="header-searchInput"/>
+					<a href="#" class="header-searchBtn">Buscar</a>
+				</div>-->
+				<nav class="menu">
+					<ul class="menu-list">
+						<li><a href="#" class="menu-listLink">Top Hits</a></li>
+						<li><a href="#" class="menu-listLink">Profile</a></li>
+						<li><a href="#" class="menu-listLink">Settings</a></li>
+						<li><a href="#" class="menu-listLink">My Likes</a></li>
+						<li><a href="#" class="menu-listLink">Playlists</a></li>
+						<li><a href="#" class="menu-listLink">Logout</a></li>
+					</ul>
+				</nav>	
+			</div>	
+		</div>
 	</header>
 	
-	<section class="container">
-		<article>
-			<figure><img src="images/song_01.jpg" alt=""></figure>
-			<h3>Girl</h3>
-			<p>Pharrell Williams</p>
-		</article>
-		<article>
-			<figure><img src="images/song_02.jpg" alt=""></figure>
-			<h3>Love Letters</h3>
-			<p>Metronomy</p>
-		</article>
-		<article>
-			<figure><img src="images/song_03.jpg" alt=""></figure>
-			<h3>Present tense</h3>
-			<p>Wild beasts</p>
-		</article>
-		<article>
-			<figure><img src="images/song_04.jpg" alt=""></figure>
-			<h3>Little red</h3>
-			<p>Katy B</p>
-		</article>
-		<article><figure><img src="images/song_05.jpg" alt=""></figure>
+	<div class="songs-playing-container">
+		<section class="songs-playing small medium large">
+			<figure class="songs-imageContainer">
+				<img src="images/songs/songs_main_01.jpg" alt="">
+				<div class="actions">
+					<a href="#" class="action icon-add"></a>
+					<a href="#" class="action icon-love"></a>
+					<a href="#" class="action icon-share"></a>
+				</div>
+			</figure>
+			<div class="progress">
+				<span>1:25</span>
+				<div class="total">
+					<div class="state">
+						<div class="circle">
+							
+						</div>
+					</div>
+				</div>
+				<span>4:00</span>
+			</div>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
 
-			<h3>The power and the..</h3>
-			<p>Perc</p>
+			<div class="actions controls">
+				<a href="#" class="action icon-prev"></a>
+				<a href="#" class="action icon-play"></a>
+				<a href="#" class="action icon-next"></a>
+				<a href="#" class="action icon-random"></a>
+				<a href="#" class="action icon-vol"></a>
+			</div>
+		</section>
+
+		<section class="songs-playing-list">
+			lista de canciones
+		</section>		
+	</div>
+
+	<section class="songs">
+		<article class="songs-container">
+			<figure class="songs-imageContainer"><img src="images/song_01.jpg" alt=""></figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
+		</article>
+		<article class="songs-container">
+			<figure class="songs-imageContainer"><img src="images/song_02.jpg" alt=""></figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
 			
 		</article>
-		<article>
-			<figure><img src="images/song_06.jpg" alt=""></figure>
-			<h3>Adhesive</h3>
-			<p>Container</p>
+		<article class="songs-container">
+			<figure class="songs-imageContainer"><img src="images/song_03.jpg" alt=""></figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
 			
+		</article>
+		<article class="songs-container">
+			<figure class="songs-imageContainer"><img src="images/song_04.jpg" alt=""></figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
+			
+		</article>
+		<article class="songs-container">
+			<figure class="songs-imageContainer">
+				<img src="images/song_05.jpg" alt="">
+			</figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
+			
+		</article>
+		<article class="songs-container">
+			<figure class="songs-imageContainer"><img src="images/song_06.jpg" alt=""></figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
+		</article>
+		<article class="songs-container">
+			<figure class="songs-imageContainer"><img src="images/song_04.jpg" alt=""></figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
+			
+		</article>
+		<article class="songs-container">
+			<figure class="songs-imageContainer">
+				<img src="images/song_05.jpg" alt="">
+			</figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
+			
+		</article>
+		<article class="songs-container">
+			<figure class="songs-imageContainer"><img src="images/song_06.jpg" alt=""></figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
+		</article>
+		<article class="songs-container">
+			<figure class="songs-imageContainer"><img src="images/song_04.jpg" alt=""></figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
+			
+		</article>
+		<article class="songs-container">
+			<figure class="songs-imageContainer">
+				<img src="images/song_05.jpg" alt="">
+			</figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
+			
+		</article>
+		<article class="songs-container">
+			<figure class="songs-imageContainer"><img src="images/song_06.jpg" alt=""></figure>
+			<div class="songs-description-container">
+				<h3 class="songs-title">Girl</h3>
+				<p class="songs-description">Pharrell Williams</p>
+			</div>
 		</article>
 	</section>
 </body>
