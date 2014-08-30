@@ -270,6 +270,10 @@ li {
 figure {
   margin: 0;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
 .header,
 .songs,
 .songs-playing {
@@ -365,46 +369,15 @@ figure {
   margin-bottom: 1em;
   color: #d0d2d3;
 }
-.songs-playing .menu {
-  display: none;
+.songs-playing-container {
+  background-color: #f00;
+  overflow: hidden;
+  margin-top: 2em;
 }
-.songs-playing.small {
-  width: 20em;
-  margin: 0 auto;
-}
-.songs-playing .controls a {
-  font-size: 1.5em;
-}
-.songs-playing .controls a:nth-child(even) {
-  color: #333;
-}
-.songs-playing .controls a:nth-child(odd) {
-  color: #d0d2d3;
-}
-.songs-playing .songs-description-container {
-  border-bottom: 1px solid #333;
-  margin-bottom: 1em;
-}
-.songs-playing .songs-imageContainer {
-  position: relative;
-}
-.songs-playing .songs-imageContainer img {
-  width: 320px;
-}
-.songs-playing .songs-imageContainer .actions {
-  background-color: rgba(0,0,0,0.3);
-  text-align: right;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.5em 0;
-}
-.songs-playing .songs-imageContainer a {
-  font-size: 1.8em;
-  color: #fff;
-  margin-right: 0.5em;
+.songs-playing-container .songs-playing.large {
+  background-color: #00f;
+  width: 27em;
+  float: left;
 }
 /* MEDIA QUERIES  */
 @media screen and (min-width: 480px) {
@@ -420,52 +393,108 @@ figure {
 }
 @media screen and (min-width: 1000px) {
   .header {
-    height: auto;
+    margin: 1.625em 0;
+    position: relative;
     text-align: left;
-  }
-  .header .header-mobile {
-    display: none;
   }
   .header .header-desktop {
     display: block;
-    width: 90%;
     margin: 0 auto;
+    overflow: hidden;
+    width: 90%;
+    position: relative;
   }
-  .header .header-desktop .header-logo {
+  .header .header-desktop .header-user {
+    width: 10em;
+    position: absolute;
+    top: 0.3em;
+    right: 0;
+    left: 0;
+  }
+  .header .header-desktop .header-user figure {
     float: left;
+    margin: 0 0.5em 0 0;
+  }
+  .header .header-desktop .header-user span {
+    margin: 0 0.5em 0 0;
+  }
+  .header .header-desktop .header-user img {
+    width: 38px;
+    border-radius: 50%;
+  }
+  .header .header-desktop .header-user:after {
+    content: "";
+    display: inline-block;
+    border-top: 10px solid #333;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    bottom: 0.5em;
+    position: absolute;
+    cursor: pointer;
   }
   .header .header-desktop .header-logo img {
     width: 122px;
   }
-  .header .header-desktop .header-search {
-    float: left;
-  }
-  .songs-playing-container {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .songs-playing.large {
-    text-align: left;
-    width: 27em;
-    display: inline-block;
-  }
-  .songs-playing.large .menu {
+  .header .header-hide-container {
     display: block;
   }
-  .songs-playing.large .menu .menu-list {
-    margin: 0;
-    padding: 0;
+  .header .header-hide-container .header-search {
+    position: absolute;
+    left: 50%;
+    top: 0;
   }
-  .songs-playing.large .menu .menu-list .menu-listLink {
+  .header .header-hide-container .header-search form {
+    position: relative;
+  }
+  .header .header-hide-container .header-search .header-searchInput {
+    border: 1px solid #d0d2d3;
+    border-radius: 5px;
+    height: 2.5em;
+    padding: 0 1em 0 2em;
+  }
+  .header .header-hide-container .header-search .icon-search {
+    position: absolute;
+    left: 0.5em;
+    top: 0.8em;
+    color: #d0d2d3;
+    border-right: 2px solid #d0d2d3;
+    padding: 0 0.2em 0 0;
+  }
+  .header .header-hide-container .header-search .icon-search a {
+    display: none;
+  }
+  .header .header-hide-container .header-search .close-icon a {
+    font-size: 1em;
+    color: #d0d2d3;
+    position: absolute;
+    right: 1em;
+    top: 0.7em;
+  }
+  .header .header-hide-container .menu .menu-list {
+    position: absolute;
+    top: 100%;
+  }
+  .header .header-hide-container .menu .menu-list li {
     float: left;
-    text-transform: uppercase;
+  }
+  .header .header-hide-container .menu .menu-list .menu-listLink {
     color: #333;
+    display: block;
+    text-transform: uppercase;
+    padding: 1em;
   }
-  .songs-playing.large .songs-imageContainer img {
-    width: 100%;
+  .header .header-hide-container .menu .menu-list .menu-listLink:hover,
+  .header .header-hide-container .menu .menu-list .menu-listLink.active {
+    border-top: 4px solid #818181;
+    padding-top: 0.75em;
   }
-  .songs-playing-list {
-    background-color: #f00;
-    width: 24em;
+  .header .header-mobile {
+    display: none;
+  }
+  .songs-playing-container {
+/*width 90%
+		margin 0 auto*/
+    margin-top: 4em;
   }
 }
